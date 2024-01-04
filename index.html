@@ -12,6 +12,7 @@
 <body>
     <div id="wrapper">
         <div class="container">
+            <!-- Navbar -->
             <div class="navbar">
                 <div class="logo-container">
                     <img src="Images/UserAsset/navLogo.png" class="logo" alt="">
@@ -24,8 +25,71 @@
                 </div>
             </div>
 
+            <!-- Hero Section  -->
+            <div class="hero-section">
+                <div class="absolute faded-text">Kushal kumar</div>
+                <div class="hero-section-left">
+                    <div class="hero-section-heading">
+                        Hi! Kushal Kumar
+                    </div>
+                    <div class="hero-section-heading herosection-sub-heading">
+                        I am a <span class="role"></span>
+                    </div>
+                    <div class="hero-section-description">
+                        I’m a software developer and here is my portfolio website. Here you’ll learn about my journey as
+                        software developer.
+                    </div>
+                    <div class="btn-pink" id="btn-top">Hire me</div>
+                </div>
+
+                <div class="hero-section-right">
+                    <div class="absolute icons icon-dots">
+                        <img src="./images/userAsset/dots.png" alt="" />
+                    </div>
+
+                    <div class="absolute icons icon-cube">
+                        <img src="./images/userAsset/cube.png" alt="" />
+                    </div>
+
+                    <div class="absolute icons icon-circle">
+                        <img src="./images/userAsset/circle.png" alt="" />
+                    </div>
+
+                    <div class="absolute icons icon-zigzak">
+                        <img src="./images/userAsset/zigzags.png" alt="" />
+                    </div>
+
+                    <div class="absolute icons icon-plus">
+                        <img src="./images/userAsset/plus.png" alt="" />
+                    </div>
+
+                    <div class="user-image">
+                        <img src="Images/UserAsset/kushal.png" height="330" width="310" alt="">
+                    </div>
+                </div>
+                <div class="btn-pink" id="btn-bottom">Hire me</div>
+            </div>
+
         </div>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://kit.fontawesome.com/58a810656e.js" crossorigin="anonymous"></script>
+    <script>
+        var typeData = new Typed(".role", {
+            strings: [
+                "Full Stack Developer",
+                "Web Developer",
+                "UI-UX Designer",
+                "Backend Developer",
+                "Coder",
+            ],
+            loop: true,
+            typeSpeed: 100,
+            backSpeed: 80,
+            backDelay: 1000,
+        });
+    </script>
 </body>
 
 </html>
