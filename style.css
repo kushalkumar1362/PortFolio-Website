@@ -1,91 +1,76 @@
 @import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300&display=swap");
+:root {
+  --bgOrange: #e84949;
+  --bgBlue: #6674CC;
+  --bgfooter :#304146;
+}
+body {
+  overflow-x: hidden;
+}
 * {
   margin: 0;
   padding: 0;
   font-family: "Be Vietnam Pro", sans-serif;
   scroll-behavior: smooth;
 }
-
-:root {
-  --bgOrange: #e84949;
+a {
+  text-decoration: none;
 }
-
-#wrapper {
-  height: 100vh;
-  overflow-x: hidden;
-  overflow-y: auto;
-}
-
 .container {
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
-/* Navbar Style Start */
-
+/* Navbnar Style Start*/
 .navbar {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   padding-top: 1rem;
 }
-
-.logo {
-  width: 60px;
-  z-index: -1;
-}
-
-.logo-container {
+.logo-group {
   display: flex;
   justify-content: baseline;
   align-items: center;
 }
-
-.logo-text {
-  margin-left: -0.4rem;
-  font-size: 30px;
-  font-weight: 600;
+.nav-logo {
+  width: 60px;
+  z-index: -1;
 }
-
+.nav-logo-text {
+  margin-left: -1rem;
+  font-size: 28px;
+}
 .nav-items {
   display: flex;
   gap: 2rem;
   padding: 0 4em;
 }
-
 .nav-items div {
+  transition: all 0.5s;
   font-size: 20px;
-  font-weight: 500;
   cursor: pointer;
+  font-weight: 500;
 }
-
 .nav-items div a {
-  color: rgb(0, 0, 0);
+  color: #000;
 }
-
-a {
-  text-decoration: none;
-}
-
 .nav-items div:hover {
   transition: all 0.8s;
   color: var(--bgOrange);
   font-weight: bold;
 }
-
-@media (max-width: 1300px) {
+@media (max-width: 1500px) {
   .nav-items {
     padding: 0 8em;
   }
 }
-
 @media (max-width: 1000px) {
   .nav-items {
     display: none;
   }
 }
-
-/*Navbar Style End*/
+/* Navbar Style End */
 
 /* Hero Section start  */
 .hero-section {
@@ -93,7 +78,6 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-
   gap: 5rem;
   margin: 4rem auto;
   padding: 0 1rem;
@@ -193,31 +177,28 @@ a {
 .absolute {
   position: absolute;
 }
-
 .user-image {
   padding: 2.5rem;
   filter: grayscale(1);
   transition: all 1s;
   animation: scaleImage 5s linear infinite;
 }
-
 .user-image img {
   z-index: -9;
 }
-
 @keyframes scaleImage {
   0% {
     filter: grayscale(1);
-    transform: scale(1);
+    scale: 1;
   }
   50% {
     filter: grayscale(0);
-    transform: scale(0.9);
+    scale: 0.9;
     box-shadow: 3px 3px 10px black;
   }
   100% {
     filter: grayscale(1);
-    transform: scale(1);
+    scale: 1;
   }
 }
 
@@ -229,7 +210,6 @@ a {
   animation-duration: 5s;
   animation-iteration-count: infinite;
 }
-
 @keyframes dotsAnimation {
   0% {
     transform: translateY(0px);
@@ -279,7 +259,6 @@ a {
   left: -0.3em;
   animation: zigzakAnimation 5s ease-in infinite;
 }
-
 @keyframes zigzakAnimation {
   50% {
     top: 2%;
@@ -292,7 +271,6 @@ a {
   left: 50%;
   animation: shakeEffectPlus 5s ease-in infinite;
 }
-
 @keyframes shakeEffectPlus {
   50% {
     top: 3%;
@@ -317,6 +295,13 @@ a {
   .faded-text {
     display: none;
   }
+  .btn-pink{
+    background-color: var(--bgBlue);
+  }
+  .btn-pink:hover{
+    color: black;
+    border: solid 3px var(--bgBlue);
+  }
   #btn-top {
     display: none;
   }
@@ -332,9 +317,9 @@ a {
 /* Hero section end */
 
 /* Project section start  */
-.project-section {
-  background-color: rgb(231, 231, 231);
+.projects {
   margin-top: 4rem;
+  background-color: rgb(231, 231, 231);
 }
 
 .page-header {
@@ -347,7 +332,7 @@ a {
 .project-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 3rem;
+  padding: 3rem 0;
   display: flex;
   flex-direction: column;
   gap: 120px;
@@ -430,7 +415,7 @@ a {
   bottom: 20%;
   z-index: 5;
   gap: 1em;
-  transition: 0.4s;
+  transition: all 0.4s;
 }
 
 .project-content-left {
@@ -472,7 +457,10 @@ a {
   gap: 0.9rem;
   align-items: center;
 }
-
+.btn-project {
+  border: none;
+  font-weight: 500;
+}
 .btn-project:hover {
   border: none;
 }
@@ -835,6 +823,7 @@ footer {
 @media (max-width: 1300px) {
   footer {
     padding: 0.5rem;
+    background-color: var(--bgfooter);
   }
   .footer-wrapper {
     flex-direction: column;
